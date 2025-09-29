@@ -7,26 +7,25 @@
 </head>
 <body>
   <header>
-    <h1>🎮 Meine Spiele</h1>
+    <h1>🎮 Meine Spiele Sammlung</h1>
+    <p>Wähle ein Spiel aus und spiele direkt im Browser!</p>
   </header>
 
   <main id="games-list">
-    <!-- Beispiel-Spiele -->
-    <div class="game-card" onclick="openGame('spiele/spiel1/index.html')">
+    <!-- Beispiel-Spiel -->
+    <a href="#" class="game-card" data-game="spiele/spiel1/index.html">
       <img src="spiele/spiel1/thumb.png" alt="Spiel 1">
-      <p>Spiel 1</p>
-    </div>
-
-    <div class="game-card" onclick="openGame('spiele/spiel2/index.html')">
-      <img src="spiele/spiel2/thumb.png" alt="Spiel 2">
-      <p>Spiel 2</p>
-    </div>
+      <div class="game-info">
+        <h2>Clicker Game</h2>
+        <p>Klicke so oft wie du kannst!</p>
+      </div>
+    </a>
   </main>
 
-  <!-- Overlay für das Spiel -->
+  <!-- Overlay -->
   <div id="game-overlay" class="hidden">
     <div id="overlay-header">
-      <button onclick="closeGame()">⬅ Main Seite</button>
+      <button id="back-btn">⬅ Zurück zur Hauptseite</button>
     </div>
     <iframe id="game-frame" src=""></iframe>
   </div>
