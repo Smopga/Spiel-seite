@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>Meine Spiele</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>🎮 Meine Spiele</h1>
+  </header>
+
+  <main id="games-list">
+    <!-- Beispiel-Spiele -->
+    <div class="game-card" onclick="openGame('spiele/spiel1/index.html')">
+      <img src="spiele/spiel1/thumb.png" alt="Spiel 1">
+      <p>Spiel 1</p>
+    </div>
+
+    <div class="game-card" onclick="openGame('spiele/spiel2/index.html')">
+      <img src="spiele/spiel2/thumb.png" alt="Spiel 2">
+      <p>Spiel 2</p>
+    </div>
+  </main>
+
+  <!-- Overlay für das Spiel -->
+  <div id="game-overlay" class="hidden">
+    <div id="overlay-header">
+      <button onclick="closeGame()">⬅ Main Seite</button>
+    </div>
+    <iframe id="game-frame" src=""></iframe>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
